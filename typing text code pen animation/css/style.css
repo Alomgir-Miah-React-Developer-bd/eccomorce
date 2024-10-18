@@ -1,0 +1,37 @@
+body{
+  display: flex;
+  align-items: center;
+ text-align: center;
+  min-height: 100vh;
+}
+.typing-text {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    overflow: hidden;
+    border-right: .15em solid orange; 
+    white-space: nowrap;
+    margin: 0 auto;
+    display: inline-block;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent }
+  }
+  
+  #cursor {
+    display: inline-block;
+    vertical-align: middle;
+    animation: blink 1s step-end infinite;
+  }
+  
+  #text {
+    display: inline-block;
+    vertical-align: middle;
+    animation: typing 4s steps(30, end) infinite;
+  }
+  
